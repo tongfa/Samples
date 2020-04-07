@@ -332,6 +332,17 @@
 	<p id="proxies_on">Proxies enabled for sequence: </p>
 
 	<div>
+		<h2>Reproduce veryBigInt bug</h2>
+	</div>
+		<p> </p>
+		<button class="controlBg textStyle" id="btn_SDVI01" onClick="evalScript('$._PPP_.logAnother()')">Log power of 2 integers (broken)</button>
+		<button class="controlBg textStyle" id="btn_SDVI02" onClick="evalScript('$._PPP_.logAnotherString()')">Log power of 2 integers as strings (works)</button>
+	<p> </p>
+	<p> For the <span style="font-family: Courier;">setZeroPoint</span> tests please setup an active sequence first.</p>
+		<button class="controlBg textStyle" id="btn_SDVI03" onClick="evalScript('$._PPP_.setZeroPoint(0)')">Set zero point on active sequence to 0</button>
+		<button class="controlBg textStyle" id="btn_SDVI03" onClick="evalScript('$._PPP_.setZeroPoint(884859655680000)')">Set zero point on active sequence to 884859655680000 ticks</button>
+	<p> </p>
+	<div>
 		<h2>New in 14.0!</h2>
 	</div>
 		<p> </p>
@@ -515,6 +526,7 @@
 			6 // 2nd argument
 		);
 	};
+
 </script>
 
 </html>

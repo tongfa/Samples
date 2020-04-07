@@ -2606,7 +2606,27 @@ $._PPP_={
 				$._PPP_.updateEventPanel("Failed to create re-framed sequence: " + newName + ".");
 			}
 		}
+	},
+
+    logAnother : (function () {
+	var seed = 1;
+	return function() {
+	    seed = seed * 2;
+	    $._PPP_.updateEventPanel(seed);
 	}
+    })(),
+
+    logAnotherString : (function () {
+	var seed = 1;
+	return function() {
+	    seed = seed * 2;
+	    $._PPP_.updateEventPanel(seed.toString());
+	}
+    })(),
+
+    setZeroPoint : function (ticks) {
+	app.project.activeSequence.setZeroPoint(ticks);
+    }
 };
 
 
