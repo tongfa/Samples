@@ -2626,6 +2626,11 @@ $._PPP_={
 
     setZeroPoint : function (ticks) {
 	app.project.activeSequence.setZeroPoint(ticks);
+    },
+
+    turnOffNewWorld: function () {
+	app.enableQE();
+	qe.setDebugDatabaseEntry("ScriptLayerPPro.EnableNewWorld", "false");
     }
 };
 
